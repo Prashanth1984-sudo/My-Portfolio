@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Prashanth Pothugunta | Portfolio</title>
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;600;700&display=swap" rel="stylesheet" />
+  <script defer src="scripts.js"></script>
+  <script type="module" src="bg.js"></script>
+  <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/three@0.153.0/build/three.min.js"></script>
+</head>
+<body>
+  <canvas id="bg"></canvas>
+
+  <!-- NAVIGATION -->
+  <header class="nav-header">
+    <div class="logo">Prashanth</div>
+    <nav>
+      <ul class="nav-links">
+        <li><a href="#about">About</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#contact">Contact</a></li>
+        <li><a href="#certifications">Certifications</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- HERO SECTION -->
+  <section class="hero" id="hero">
+    <div class="hero-content">
+      <h1><span class="glow-text">Solving real-world problems</span><br> with Python, AI, and efficient algorithms.</h1>
+      <p>I’m Prashanth Pothugunta, a Computer Science student passionate about Python, DSA, and AI.<br> Exploring how code and intelligence can drive innovation.</p>
+      <a href="#projects" class="cta-button">View Projects</a>
+    </div>
+  </section>
+
+  <!-- PROJECTS SECTION -->
+  <section class="projects" id="projects">
+    <h2 class="section-title">Projects</h2>
+    <div class="projects-grid">
+      <div class="project-card">
+        <div class="project-thumbnail loading">
+          <span>Coming Soon</span>
+        </div>
+        <div class="project-info">
+          <h3>AI Chatbot</h3>
+          <p>A conversational agent built using Python & NLP — launching soon!</p>
+        </div>
+      </div>
+
+      <div class="project-card">
+        <div class="project-thumbnail loading">
+          <span>Coming Soon</span>
+        </div>
+        <div class="project-info">
+          <h3>Portfolio Engine</h3>
+          <p>Dynamic portfolio template with animations and responsive UI.</p>
+        </div>
+      </div>
+
+      <div class="project-card">
+        <div class="project-thumbnail loading">
+          <span>Coming Soon</span>
+        </div>
+        <div class="project-info">
+          <h3>AI-powered Resume Analyzer and Job Matcher</h3>
+          <p>Analyzes resumes and matches them with job descriptions using NLP techniques – launching soon!</p>
+        </div>
+      </div>
+      <div class="project-card">
+        <div class="project-thumbnail loading">
+          <span>Coming Soon</span>
+        </div>
+        <div class="project-info">
+          <h3>AI-Powered MeetNote System</h3>
+          <p>Generates meeting summaries and action items using NLP techniques – launching soon!</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ABOUT SECTION -->
+  <section class="about" id="about">
+  <h2 class="section-title">About Me</h2>
+  <div class="about-3d-layout">
+    <div class="about-3d-avatar">
+      <canvas id="cube-canvas" width="260" height="260"></canvas>
+    </div>
+    <div class="about-3d-bio">
+      <p>
+        <span class="highlight">Hi, I'm Prashanth Pothugunta</span> — a passionate Computer Science student with a strong foundation in <b>Python</b>, <b>Data Structures & Algorithms</b>, and <b>Artificial Intelligence</b>.
+      </p>
+      <p>
+        I love exploring how <span class="highlight">code and intelligence</span> can drive real-world innovation. My journey includes building AI-powered projects, solving 200+ DSA problems, and experimenting with Generative AI.
+      </p>
+      <p>
+        Currently, I'm focused on <b>web development</b> and creating dynamic, interactive portfolios. I believe in continuous learning and using technology to solve meaningful problems.
+      </p>
+    </div>
+  </div>
+</section>
+
+   <section class="timeline-section">
+  <h2 class="section-title">Journey</h2>
+  <div class="timeline-grid">
+    <div class="timeline-item">
+      <div class="timeline-dot"></div>
+      <div class="timeline-card">
+        <div class="timeline-year">2022</div>
+        <h3>B.Tech in Computer Science & Engineering</h3>
+        <p>Began my undergraduate journey in CSE.</p>
+      </div>
+    </div>
+    <div class="timeline-item">
+      <div class="timeline-dot"></div>
+      <div class="timeline-card">
+        <div class="timeline-year">2023</div>
+        <h3>Python & DSA Projects</h3>
+        <p>Built multiple Python projects and solved 200+ DSA problems.</p>
+      </div>
+    </div>
+    <div class="timeline-item">
+      <div class="timeline-dot"></div>
+      <div class="timeline-card">
+        <div class="timeline-year">2024</div>
+        <h3>AI & Generative AI</h3>
+        <p>Explored core AI concepts and started experimenting with Generative AI.</p>
+      </div>
+    </div>
+    <div class="timeline-item">
+      <div class="timeline-dot"></div>
+      <div class="timeline-card">
+        <div class="timeline-year">2025</div>
+        <h3>Web Development</h3>
+        <p>Learning web development and building a personal portfolio.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+  <section class="skills" id="skills">
+  <h2 class="section-title">Skills & Expertise</h2>
+  <p class="skills-desc">My technical skills and areas of expertise across various technologies and domains.</p>
+  <div class="skills-layout">
+    <div class="skills-left">
+      <h3>Technical Skills</h3>
+      <div class="skill-bar">
+        <span>Python</span>
+        <div class="bar-bg"><div class="bar-fill" style="width: 95%"></div></div>
+      </div>
+      <div class="skill-bar">
+        <span>C++</span>
+        <div class="bar-bg"><div class="bar-fill" style="width: 85%"></div></div>
+      </div>
+      <div class="skill-bar">
+        <span>Java</span>
+        <div class="bar-bg"><div class="bar-fill" style="width: 80%"></div></div>
+      </div>
+      <div class="skill-bar">
+        <span>HTML/CSS</span>
+        <div class="bar-bg"><div class="bar-fill" style="width: 90%"></div></div>
+      </div>
+      <div class="skill-bar">
+        <span>DSA</span>
+        <div class="bar-bg"><div class="bar-fill" style="width: 85%"></div></div>
+      </div>
+      <div class="skill-bar">
+        <span>AI/ML</span>
+        <div class="bar-bg"><div class="bar-fill" style="width: 75%"></div></div>
+      </div>
+    </div>
+    <div class="skills-right">
+      <h3>Tools & Frameworks</h3>
+      <div class="tools-grid">
+        <div class="tool-card"><img src="https://www.elegantthemes.com/blog/wp-content/uploads/2019/01/000-VS-Code.png"alt="VS Code"/><span>VS Code</span></div>
+        <div class="tool-card"><img src="https://thedatafrog.com/static/blog/images/2019/01/Anaconda_Logo.png" alt="Anaconda"/><span>Anaconda</span></div>
+        <div class="tool-card"><img src="https://media.licdn.com/dms/image/v2/D4D12AQHLSWpsEMjYVQ/article-cover_image-shrink_720_1280/article-cover_image-shrink_720_1280/0/1664283630836?e=2147483647&v=beta&t=vY0TBZxvF_mNk4IjWiMmME0nIAwAbS_EXqSmJqJATTw" alt="Jupyter"/><span>Jupyter</span></div>
+        <div class="tool-card"><img src="https://algotrading101.com/learn/wp-content/uploads/2021/05/Google-Colab-Guide-e1620759490851.jpg" alt="Colab"/><span>Colab</span></div>
+        <div class="tool-card"><img src="https://play-lh.googleusercontent.com/hoVBnPBRehmXsCqESLXRH2E3OTxklkwKZlb1psn7imm0VUSobn2nevS9RRFWb9GM4-o" alt="Figma"/><span>Figma</span></div>
+        <div class="tool-card"><img src="https://miro.medium.com/v2/resize:fit:646/1*ohXKD3FJhC0E-8bj_DWTOw.jpeg" alt="NumPy"/><span>NumPy</span></div>
+        <div class="tool-card"><img src="https://miro.medium.com/v2/resize:fit:770/1*pJnfAWcDbz7qnQr7at3jkw.png" alt="Pandas"/><span>Pandas</span></div>
+        <div class="tool-card"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS9zgnuopQT6gbpPLxIiYA0_vN6H5Gw5FR4h8Z9JpP2k8W8_UbGPQILqnONIqzXd-gPD6U&usqp=CAU" alt="Scikit-learn"/><span>Scikit-learn</span></div>
+      </div>
+      <h3>Soft Skills</h3>
+      <div class="soft-skills">
+        <span class="soft-tag">Problem Solving</span>
+        <span class="soft-tag">Communication</span>
+        <span class="soft-tag">Teamwork</span>
+        <span class="soft-tag">Adaptability</span>
+        <span class="soft-tag">Critical Thinking</span>
+        <span class="soft-tag">Creativity</span>
+        <span class="soft-tag">Time Management</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+    <section class="certifications" id="certifications">
+  <h2 class="section-title">Certifications</h2>
+
+  <div class="projects-grid">
+
+    <div class="project-card">
+      <div class="project-thumbnail">
+        <img src="certificates/ai-essentials-google.png" alt="AI Essentials" />
+      </div>
+      <div class="project-info">
+        <h3>AI Essentials</h3>
+        <p>Google — Fundamentals of Artificial Intelligence</p>
+        <a href="certificates/google ai essentials.pdf" target="_blank">View Certificate</a>
+      </div>
+    </div>
+
+    <div class="project-card">
+      <div class="project-thumbnail">
+        <img src="certificates/data-science-infosys.png" alt="Data Science Infosys" />
+      </div>
+      <div class="project-info">
+        <h3>Intro to Data Science</h3>
+        <p>Infosys — Basics of Data Analysis</p>
+        <a href="certificates/data-science-infosys.pdf" target="_blank">View Certificate</a>
+      </div>
+    </div>
+
+    <div class="project-card">
+      <div class="project-thumbnail">
+        <img src="certificates/sql-ibm.png" alt="SQL IBM" />
+      </div>
+      <div class="project-info">
+        <h3>Intro to SQL</h3>
+        <p>IBM — SQL queries and relational data</p>
+        <a href="certificates/sql-ibm.pdf" target="_blank">View Certificate</a>
+      </div>
+    </div>
+
+    <div class="project-card">
+      <div class="project-thumbnail">
+        <img src="certificates/ai-intro-infosys.png" alt="AI Intro Infosys" />
+      </div>
+      <div class="project-info">
+        <h3>Intro to AI</h3>
+        <p>Infosys — Core principles of AI</p>
+        <a href="certificates/ai-intro-infosys.pdf" target="_blank">View Certificate</a>
+      </div>
+    </div>
+
+    <div class="project-card">
+      <div class="project-thumbnail">
+        <img src="certificates/ai-elements-helsinki.png" alt="AI Elements" />
+      </div>
+      <div class="project-info">
+        <h3>AI Elements</h3>
+        <p>University of Helsinki — Elements of AI and ethics</p>
+        <a href="certificates/ai-elements-helsinki.pdf" target="_blank">View Certificate</a>
+      </div>
+    </div>
+
+    <div class="project-card">
+      <div class="project-thumbnail">
+        <img src="certificates/ai-productivity-microsoft.png" alt="AI Productivity" />
+      </div>
+      <div class="project-info">
+        <h3>AI Productivity</h3>
+        <p>Microsoft & LinkedIn — AI tools for workplace efficiency</p>
+        <a href="certificates/ai-productivity-microsoft.pdf" target="_blank">View Certificate</a>
+      </div>
+    </div>
+    <div class="project-card">
+      <div class="project-thumbnail">
+        <img src="certificates/Foundations of Ux Design-google.png" alt="AI Productivity" />
+      </div>
+      <div class="project-info">
+        <h3>Foundations of UX Design</h3>
+        <p>Google — Principles of user-experience design</p>
+        <a href="certificates/Foundations of Ux Design-google.pdf" target="_blank">View Certificate</a>
+      </div>
+  </div>
+</section>
+</section>
+
+
+  <!-- CONTACT SECTION -->
+  <section class="contact" id="contact">
+    <h2 class="section-title">Get in Touch</h2>
+    <form action="https://formspree.io/f/your-form-id" method="POST" class="contact-form">
+      <input type="text" name="name" placeholder="Your Name" required />
+      <input type="email" name="_replyto" placeholder="Your Email" required />
+      <textarea name="message" placeholder="Your Message" rows="6" required></textarea>
+      <button type="submit">Send Message</button>
+    </form>
+    <div class="contact-info">
+      <p><strong>Email:</strong> pothuguntaprashanth84@gmail.com</p>
+      <p><strong>Phone:</strong> +91 90592 37125</p>
+      <a href="https://www.linkedin.com/in/prashanth-pothugunta" target="_blank">LinkedIn Profile</a>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <p>© 2025 Prashanth Pothugunta. All rights reserved.</p>
+    <div class="social-icons">
+      <a href="mailto:pothuguntaprashanth84@gmail.com">📧</a>
+      <a href="https://www.linkedin.com/in/prashanth-pothugunta" target="_blank">💼</a>
+    </div>
+  </footer>
+<script>
+  // 3D Torus Knot using three.js
+  const scene = new THREE.Scene();
+  const camera = new THREE.PerspectiveCamera(75, 260/260, 0.1, 1000);
+  const renderer = new THREE.WebGLRenderer({ canvas: document.getElementById('cube-canvas'), alpha: true });
+  renderer.setSize(260, 260);
+
+  const geometry = new THREE.TorusKnotGeometry(0.8, 0.28, 120, 16);
+  const material = new THREE.MeshNormalMaterial({ flatShading: true });
+  const torusKnot = new THREE.Mesh(geometry, material);
+  scene.add(torusKnot);
+
+  camera.position.z = 3;
+
+  function animate() {
+    requestAnimationFrame(animate);
+    torusKnot.rotation.x += 0.015;
+    torusKnot.rotation.y += 0.025;
+    renderer.render(scene, camera);
+  }
+  animate();
+</script>
+  
+
+</body>
+</html>
