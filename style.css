@@ -622,3 +622,125 @@ canvas#bg {
     left: -30px;
   }
 }
+/* Certifications Section */
+.certifications {
+  max-width: 1100px;
+  margin: 3rem auto;
+  padding: 2rem 1rem;
+}
+
+.certifications .section-title {
+  text-align: center;
+  font-size: 2rem;
+  margin-bottom: 2rem;
+  color: #0ff;
+  letter-spacing: 1px;
+}
+
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(270px, 1fr));
+  gap: 2rem;
+}
+
+.project-card {
+  background: #14213d;
+  border-radius: 16px;
+  box-shadow: 0 2px 16px rgba(0,0,0,0.10);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.2s;
+}
+
+.project-card:hover {
+  transform: translateY(-6px) scale(1.03);
+  box-shadow: 0 6px 24px rgba(0,255,255,0.12);
+}
+
+.project-thumbnail {
+  width: 100%;
+  height: 180px;
+  background: #1a1a2f;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.project-thumbnail img {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
+  border-radius: 0 0 12px 12px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+}
+
+.project-info {
+  padding: 1.2rem 1.5rem 1.5rem 1.5rem;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.project-info h3 {
+  margin: 0 0 0.5rem 0;
+  font-size: 1.15rem;
+  color: #0ff;
+  font-weight: 600;
+}
+
+.project-info p {
+  margin: 0 0 1rem 0;
+  color: #b3c2e0;
+  font-size: 1rem;
+}
+
+.project-info a {
+  color: #fff;
+  background: linear-gradient(90deg, #0ff 60%, #6f00ff 100%);
+  padding: 0.5rem 1.2rem;
+  border-radius: 20px;
+  text-decoration: none;
+  font-weight: 500;
+  align-self: flex-start;
+  transition: background 0.2s;
+  box-shadow: 0 2px 8px rgba(0,255,255,0.08);
+}
+
+.project-info a:hover {
+  background: linear-gradient(90deg, #6f00ff 60%, #0ff 100%);
+  color: #fff;
+}
+
+/* Responsive */
+@media (max-width: 700px) {
+  .projects-grid {
+    grid-template-columns: 1fr;
+    gap: 1.2rem;
+  }
+  .project-thumbnail {
+    height: 140px;
+  }
+  .certifications {
+    padding: 1rem 0.2rem;
+  }
+}
+.project-thumbnail {
+  width: 100%;
+  height: 180px;
+  background: #1a1a2f;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.project-thumbnail img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* or use 'contain' if you want the whole image visible */
+  border-radius: 0 0 12px 12px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+}
