@@ -16,18 +16,20 @@
 
   <!-- NAVIGATION -->
   <header class="nav-header">
-    <div class="logo">Prashanth</div>
-    <nav>
-      <ul class="nav-links">
-        <li><a href="#about">About</a></li>
-        <li><a href="#projects">Projects</a></li>
-        <li><a href="#skills">Skills</a></li>
-        <li><a href="#certifications">Certifications</a></li>
-        <li><a href="#contact">Contact</a></li>
-      </ul>
-    </nav>
-  </header>
-
+  <div class="logo">Prashanth</div>
+  <button class="nav-toggle" id="nav-toggle" aria-label="Toggle navigation">
+    &#9776;
+  </button>
+  <nav id="main-nav">
+    <ul class="nav-links">
+      <li><a href="#about">About</a></li>
+      <li><a href="#projects">Projects</a></li>
+      <li><a href="#skills">Skills</a></li>
+      <li><a href="#certifications">Certifications</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </nav>
+</header>
   <!-- HERO SECTION -->
   <section class="hero" id="hero">
     <div class="hero-content">
@@ -401,6 +403,17 @@
     renderer.render(scene, camera);
   }
   animate();
+</script>
+<script>
+const navToggle = document.getElementById('nav-toggle');
+const mainNav = document.getElementById('main-nav');
+navToggle.addEventListener('click', () => {
+  mainNav.classList.toggle('open');
+});
+// Optional: close nav when a link is clicked (for better UX)
+document.querySelectorAll('.nav-links a').forEach(link => {
+  link.addEventListener('click', () => mainNav.classList.remove('open'));
+});
 </script>
 </body>
 </html>

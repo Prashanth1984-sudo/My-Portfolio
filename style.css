@@ -878,3 +878,57 @@ canvas#bg {
     margin-bottom: 1rem;
   }
 }
+/* Hide hamburger on desktop, show on mobile */
+.nav-toggle {
+  display: none;
+  background: none;
+  border: none;
+  font-size: 2rem;
+  color: var(--accent, #0ff);
+  cursor: pointer;
+  margin-left: 1rem;
+}
+
+@media (max-width: 800px) {
+  .nav-toggle {
+    display: block;
+    position: absolute;
+    right: 1.5rem;
+    top: 1.2rem;
+    z-index: 1001;
+  }
+  #main-nav {
+    position: absolute;
+    top: 60px;
+    right: 0;
+    background: var(--card, #14213d);
+    width: 200px;
+    box-shadow: 0 2px 16px rgba(0,0,0,0.15);
+    transform: translateX(100%);
+    transition: transform 0.3s;
+    z-index: 1000;
+  }
+  #main-nav.open {
+    transform: translateX(0);
+  }
+  .nav-links {
+    flex-direction: column;
+    gap: 1.5rem;
+    padding: 1.5rem 0;
+    align-items: flex-start;
+  }
+  .nav-links li {
+    width: 100%;
+    text-align: left;
+    padding-left: 1.5rem;
+  }
+}
+
+/* Desktop nav stays horizontal */
+.nav-links {
+  display: flex;
+  gap: 2rem;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
