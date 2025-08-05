@@ -40,7 +40,7 @@
   <!-- ABOUT SECTION -->
   <section class="about" id="about">
   <h2 class="section-title">About Me</h2>
-  <div class="about-3d-layout">
+  <div class="about-flex">
     <div class="about-3d-avatar">
       <canvas id="cube-canvas" width="260" height="260"></canvas>
     </div>
@@ -57,7 +57,6 @@
     </div>
   </div>
 </section>
-
   <!-- PROJECTS SECTION -->
   <section class="projects" id="projects">
     <h2 class="section-title">Projects</h2>
@@ -293,7 +292,17 @@
     <a href="link_certificates\Screenshot 2025-07-23 174048.png" target="_blank">View Certificate</a>
   </div>
 </div>
+<div class="project-card">
+  <div class="project-thumbnail">
+    <img src="link_certificates\oracle.png" alt="Oracle Cloud Infrastructure 2025 AI Foundations Associate" />
   </div>
+  <div class="project-info">
+    <h3>Oracle Cloud Infrastructure 2025 AI Foundations Associate</h3>
+    <p>Oracle — Foundations of AI and machine learning</p>
+    <a href="link_certificates\oracle.png" target="_blank">View Certificate</a>
+  </div>
+</div>
+</div>
 </section>
 </section>
 
@@ -323,28 +332,75 @@
     </div>
   </footer>
 <script>
-  // 3D Torus Knot using three.js
+  // 3D Rolling Cube with Themed Photos - Neon/Cyan Tint
+  const canvasSize = 260;
   const scene = new THREE.Scene();
-  const camera = new THREE.PerspectiveCamera(75, 260/260, 0.1, 1000);
-  const renderer = new THREE.WebGLRenderer({ canvas: document.getElementById('cube-canvas'), alpha: true });
-  renderer.setSize(260, 260);
+  const camera = new THREE.PerspectiveCamera(45, 1, 0.1, 1000);
+  const renderer = new THREE.WebGLRenderer({ canvas: document.getElementById('cube-canvas'), alpha: true, antialias: true });
+  renderer.setSize(canvasSize, canvasSize);
 
-  const geometry = new THREE.TorusKnotGeometry(0.8, 0.28, 120, 16);
-  const material = new THREE.MeshNormalMaterial({ flatShading: true });
-  const torusKnot = new THREE.Mesh(geometry, material);
-  scene.add(torusKnot);
+  // Neon cyan overlay color
+  const cyanOverlay = 0x00ffff;
+
+  // Load your 6 photos for the cube faces (use forward slashes!)
+  const loader = new THREE.TextureLoader();
+  const materials = [
+    new THREE.MeshBasicMaterial({ 
+      map: loader.load('link_certificates/images/WhatsApp Image 2025-08-05 at 23.05.16_b630c18d.jpg'),
+      color: cyanOverlay,
+      opacity: 0.85,
+      transparent: true
+    }),
+    new THREE.MeshBasicMaterial({ 
+      map: loader.load('link_certificates/images/WhatsApp Image 2025-08-05 at 23.06.46_ac1a550c.jpg'),
+      color: cyanOverlay,
+      opacity: 0.85,
+      transparent: true
+    }),
+    new THREE.MeshBasicMaterial({ 
+      map: loader.load('link_certificates/images/WhatsApp Image 2025-08-05 at 22.56.01_16d6fa8e.jpg'),
+      color: cyanOverlay,
+      opacity: 0.85,
+      transparent: true
+    }),
+    new THREE.MeshBasicMaterial({ 
+      map: loader.load('link_certificates/images/WhatsApp Image 2025-08-05 at 23.17.57_524b2d0b.jpg'),
+      color: cyanOverlay,
+      opacity: 0.85,
+      transparent: true
+    }),
+    new THREE.MeshBasicMaterial({ 
+      map: loader.load('link_certificates/images/WhatsApp Image 2025-08-05 at 23.18.00_a3cd1a8e.jpg'),
+      color: cyanOverlay,
+      opacity: 0.85,
+      transparent: true
+    }),
+    new THREE.MeshBasicMaterial({ 
+      map: loader.load('link_certificates/images/WhatsApp Image 2025-08-05 at 23.17.59_5642a521.jpg'),
+      color: cyanOverlay,
+      opacity: 0.85,
+      transparent: true
+    })
+  ];
+
+  // Cube geometry and mesh
+  const geometry = new THREE.BoxGeometry(1.2, 1.2, 1.2);
+  const cube = new THREE.Mesh(geometry, materials);
+  scene.add(cube);
 
   camera.position.z = 3;
 
+  // Lighting (optional)
+  const ambientLight = new THREE.AmbientLight(0xffffff, 1);
+  scene.add(ambientLight);
+
   function animate() {
     requestAnimationFrame(animate);
-    torusKnot.rotation.x += 0.015;
-    torusKnot.rotation.y += 0.025;
+    cube.rotation.x += 0.015;
+    cube.rotation.y += 0.025;
     renderer.render(scene, camera);
   }
   animate();
 </script>
-  
-
 </body>
 </html>
