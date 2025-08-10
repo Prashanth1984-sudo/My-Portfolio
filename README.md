@@ -4,7 +4,7 @@ Welcome to my personal portfolio! This website highlights my projects, skills, a
 
 ## 🚀 Live Demo
 
-[🔗 View it here](https://prashanth1984-sudo.github.io/My-Portfolio) *(update this link if different)*
+[🔗 View it here](https://prashanth-portfolioo.netlify.app/)*(update this link if different)*
 
 ---
 
