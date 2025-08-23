@@ -43,9 +43,10 @@
   <section class="about" id="about">
   <h2 class="section-title">About Me</h2>
   <div class="about-flex">
-    <div class="about-3d-avatar">
-      <canvas id="cube-canvas" width="260" height="260"></canvas>
-    </div>
+    <!-- Replace this in your About section -->
+<div class="about-3d-avatar">
+  <img src="link_certificates/WhatsApp Image 2025-08-05 at 23.06.46_ac1a550c.jpg" alt="Prashanth Pothugunta" class="about-photo" />
+</div>
     <div class="about-3d-bio">
       <p>
         <span class="highlight">Hi, I'm Prashanth Pothugunta</span> — a passionate Computer Science student with a strong foundation in <b>Python</b>, <b>Data Structures & Algorithms</b>, and <b>Artificial Intelligence</b>.
@@ -333,87 +334,5 @@
       <a href="https://www.linkedin.com/in/prashanth-pothugunta" target="_blank">💼</a>
     </div>
   </footer>
-<script>
-  // 3D Rolling Cube with Themed Photos - Neon/Cyan Tint
-  const canvasSize = 260;
-  const scene = new THREE.Scene();
-  const camera = new THREE.PerspectiveCamera(45, 1, 0.1, 1000);
-  const renderer = new THREE.WebGLRenderer({ canvas: document.getElementById('cube-canvas'), alpha: true, antialias: true });
-  renderer.setSize(canvasSize, canvasSize);
-
-  // Neon cyan overlay color
-  const cyanOverlay = 0x00ffff;
-
-  // Load your 6 photos for the cube faces (use forward slashes!)
-  const loader = new THREE.TextureLoader();
-  const materials = [
-    new THREE.MeshBasicMaterial({ 
-      map: loader.load('link_certificates/images/WhatsApp Image 2025-08-05 at 23.05.16_b630c18d.jpg'),
-      color: cyanOverlay,
-      opacity: 0.85,
-      transparent: true
-    }),
-    new THREE.MeshBasicMaterial({ 
-      map: loader.load('link_certificates/images/WhatsApp Image 2025-08-05 at 23.06.46_ac1a550c.jpg'),
-      color: cyanOverlay,
-      opacity: 0.85,
-      transparent: true
-    }),
-    new THREE.MeshBasicMaterial({ 
-      map: loader.load('link_certificates/images/WhatsApp Image 2025-08-05 at 22.56.01_16d6fa8e.jpg'),
-      color: cyanOverlay,
-      opacity: 0.85,
-      transparent: true
-    }),
-    new THREE.MeshBasicMaterial({ 
-      map: loader.load('link_certificates/images/WhatsApp Image 2025-08-05 at 23.17.57_524b2d0b.jpg'),
-      color: cyanOverlay,
-      opacity: 0.85,
-      transparent: true
-    }),
-    new THREE.MeshBasicMaterial({ 
-      map: loader.load('link_certificates/images/WhatsApp Image 2025-08-05 at 23.18.00_a3cd1a8e.jpg'),
-      color: cyanOverlay,
-      opacity: 0.85,
-      transparent: true
-    }),
-    new THREE.MeshBasicMaterial({ 
-      map: loader.load('link_certificates/images/WhatsApp Image 2025-08-05 at 23.17.59_5642a521.jpg'),
-      color: cyanOverlay,
-      opacity: 0.85,
-      transparent: true
-    })
-  ];
-
-  // Cube geometry and mesh
-  const geometry = new THREE.BoxGeometry(1.2, 1.2, 1.2);
-  const cube = new THREE.Mesh(geometry, materials);
-  scene.add(cube);
-
-  camera.position.z = 3;
-
-  // Lighting (optional)
-  const ambientLight = new THREE.AmbientLight(0xffffff, 1);
-  scene.add(ambientLight);
-
-  function animate() {
-    requestAnimationFrame(animate);
-    cube.rotation.x += 0.015;
-    cube.rotation.y += 0.025;
-    renderer.render(scene, camera);
-  }
-  animate();
-</script>
-<script>
-const navToggle = document.getElementById('nav-toggle');
-const mainNav = document.getElementById('main-nav');
-navToggle.addEventListener('click', () => {
-  mainNav.classList.toggle('open');
-});
-// Optional: close nav when a link is clicked (for better UX)
-document.querySelectorAll('.nav-links a').forEach(link => {
-  link.addEventListener('click', () => mainNav.classList.remove('open'));
-});
-</script>
 </body>
 </html>

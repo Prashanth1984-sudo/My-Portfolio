@@ -932,3 +932,45 @@ canvas#bg {
   margin: 0;
   padding: 0;
 }
+.about-flex {
+  display: flex;
+  align-items: center;
+  gap: 2.5rem;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.about-3d-avatar {
+  flex: 0 0 240px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.about-photo {
+  width: 220px;
+  height: 220px;
+  object-fit: cover;
+  border-radius: 18px;
+  box-shadow: 0 8px 32px rgba(0,0,0,0.18);
+  filter: grayscale(100%);
+  transition: filter 0.5s, transform 0.4s;
+  background: #111;
+  display: block;
+}
+
+.about-photo:hover {
+  filter: grayscale(0%);
+  transform: scale(1.04);
+  cursor: pointer;
+}
+
+@media (max-width: 900px) {
+  .about-flex {
+    flex-direction: column;
+    gap: 2rem;
+  }
+  .about-3d-avatar {
+    margin-bottom: 1rem;
+  }
+}
